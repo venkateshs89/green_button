@@ -9,6 +9,6 @@ class AddColumnsToProducts < ActiveRecord::Migration[5.2]
     add_column :products, :applications_and_uses, :jsonb, null: false, default: {}
     add_column :products, :properties, :jsonb, null: false, default: {}
     add_column :products, :regulatory_and_compliance, :jsonb, null: false, default: {}
-    add_column :products, :regional_availability, :string, array: true, default: []
+    add_column :products, :regional_availability, :jsonb, null: false, default: {}
   end
 end

@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2021_04_09_050148) do
     t.jsonb "applications_and_uses", default: {}, null: false
     t.jsonb "properties", default: {}, null: false
     t.jsonb "regulatory_and_compliance", default: {}, null: false
-    t.string "regional_availability", default: [], array: true
+    t.jsonb "regional_availability", default: {}, null: false
     t.integer "brand_id"
     t.index ["resource_id"], name: "index_products_on_resource_id"
     t.index ["slug"], name: "index_products_on_slug", unique: true

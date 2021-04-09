@@ -10,6 +10,6 @@ class Api::V1::StorefrontsController < ApplicationController
   def set_storefront
     @storefront = Storefront.find(params[:id])
   rescue
-    render json: { message: 'Product not found' }, status: 404
+    render json: { message: 'Storefront not found' }, status: 404
   end
 end

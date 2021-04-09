@@ -10,6 +10,6 @@ class Api::V1::BrandsController < ApplicationController
   def set_brand
     @brand = Brand.find(params[:id])
   rescue
-    render json: { message: 'Product not found' }, status: 404
+    render json: { message: 'Brand not found' }, status: 404
   end
 end
