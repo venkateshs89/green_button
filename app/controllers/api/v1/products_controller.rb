@@ -1,6 +1,6 @@
 class Api::V1::ProductsController < ApplicationController
 
-  before_action :set_product, only: [:show]
+  before_action :set_product, only: [:show, :product_detail]
 
   def show
     render json: { data: ProductSerializer.new(@product).to_h }, status: 200
