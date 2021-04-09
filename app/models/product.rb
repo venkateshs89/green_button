@@ -4,4 +4,7 @@ class Product < ApplicationRecord
 
   belongs_to :resource, polymorphic: true
   belongs_to :brand
+
+  delegate :name, to: :resource, prefix: :storefront
+  delegate :name, to: :brand, prefix: true
 end
