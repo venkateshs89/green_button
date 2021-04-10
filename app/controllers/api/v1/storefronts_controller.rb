@@ -5,6 +5,10 @@ class Api::V1::StorefrontsController < ApplicationController
     render json: { data: StorefrontSerializer.new(@storefront).to_h }, status: 200
   end
 
+  def index
+    render json: { data: BasicStorefrontDetailsSerializer.new(Storefront.all).to_h }, status: 200
+  end
+
   private
 
   def set_storefront
