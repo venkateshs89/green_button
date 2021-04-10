@@ -12,7 +12,7 @@ class Api::V1::StorefrontsController < ApplicationController
   private
 
   def set_storefront
-    @storefront = Storefront.find(params[:id])
+    @storefront = Storefront.friendly.find(params[:id])
   rescue
     render json: { message: 'Storefront not found' }, status: 404
   end
