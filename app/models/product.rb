@@ -7,4 +7,5 @@ class Product < ApplicationRecord
 
   delegate :name, to: :resource, prefix: :storefront
   delegate :name, to: :brand, prefix: true
+  delegate :slug, to: :resource, prefix: :storefront
 end

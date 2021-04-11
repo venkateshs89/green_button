@@ -6,4 +6,8 @@ class StorefrontSerializer < ApplicationSerializer
   attribute :brands do |record|
     BasicBrandDetailsSerializer.new(record.brands).to_h
   end
+
+  attribute :products do |record|
+    BasicProductDetailsSerializer.new(record.products).to_h
+  end
 end

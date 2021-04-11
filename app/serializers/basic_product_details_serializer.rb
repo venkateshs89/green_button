@@ -14,4 +14,8 @@ class BasicProductDetailsSerializer < ApplicationSerializer
   attribute :brand_name do |record|
     record.brand_name
   end
+
+  attribute :storefront_slug do |record|
+    record.storefront_slug
+  end
 end

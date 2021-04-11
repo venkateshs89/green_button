@@ -4,4 +4,6 @@ class Brand < ApplicationRecord
 
   has_many :products, dependent: :destroy
   belongs_to :resource, polymorphic: true
+
+  delegate :slug, to: :resource, prefix: :storefront
 end
